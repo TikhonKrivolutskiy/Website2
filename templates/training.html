@@ -6,13 +6,13 @@
     </head>
     <body>
         <h1>Миссия Колонизация Марса</h1>
-	<h4>И на Марсе будут яблони цвести!</h4>
-	 {% if occ == 'врач' or occ == 'ученый' %}
-        	<h2>Научные симуляторы</h2>
-		<img src="/static/img/sci.png"></img>
- 	{% else %}
-       		<h2>Инженерные тренажеры</h2>
-		<img src="/static/img/eng.png"></img>
-	{% endif %}
+    <h4>И на Марсе будут яблони цвести!</h4>
+    {% if 'инженер' in occ %}
+        <h2>Инженерные тренажеры</h2>
+        <img src="/static/img/eng.png"></img>
+    {% else %}
+        <h2>Научные симуляторы</h2>
+        <img src="/static/img/sci.png"></img>
+    {% endif %}
     </body>
 </html>
