@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/style.css"/>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+    <h1>Миссия Колонизация Марса</h1>
+    <h4>И на Марсе будут яблони цвести!</h4>
+    <h2>Размещение по каютам</h2>
+    {% set user_list = ['Ридли Скотт', 'Энди Уир', 'Марк Уотни', 'Венката Капур', 'Тедди Сандерс', 'Шон Бин'] %}
+    <ul>
+    {% for user in user_list %}
+    <li>{{ user }} - Каюта № {{ loop.index }} {% if loop.first %} - капитан корабля {% endif %}
+    </li>
+    {% endfor %}
+    </ul>
+    </body>
+</html>
