@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Оформление каюты</h2>
+    {% if gender == 'female' and age < 21 %}
+    <table cellpadding="4" cellspacing="1">
+        <tr><th>Цвет стен</th><th>Эмблема</th></tr>
+        <tr><td><img src="/static/img/female1.png"></img></td><td><img src="/static/img/child.png"></img></td></tr>
+    </table>
+    {% elif gender == 'female' and age >= 21 %}
+    <table cellpadding="4" cellspacing="1">
+        <tr><th>Цвет стен</th><th>Эмблема</th></tr>
+        <tr><td><img src="/static/img/female2.png"></img></td><td><img src="/static/img/adult.png"></img></td></tr>
+    </table>
+    {% elif gender == 'male' and age < 21 %}
+    <table cellpadding="4" cellspacing="1">
+        <tr><th>Цвет стен</th><th>Эмблема</th></tr>
+        <tr><td><img src="/static/img/male1.png"></img></td><td><img src="/static/img/child.png"></img></td></tr>
+    </table>
+    {% elif gender == 'male' and age >= 21 %}
+    <table cellpadding="4" cellspacing="1">
+        <tr><th>Цвет стен</th><th>Эмблема</th></tr>
+        <tr><td><img src="/static/img/male2.png"></img></td><td><img src="/static/img/adult.png"></img></td></tr>
+    </table>
+    {% endif %}
+{% endblock %}
