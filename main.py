@@ -25,7 +25,10 @@ def training(prof):
 
 @app.route('/list_prof/<atr>')
 def list_prof(atr):
-    return render_template('list_prof.html', title='Список профессий', atr=atr)   
+    prof_list = ["Инженер-исследователь", "Пилот", "Строитель", "Экзобиолог", "Врач", "Инженер по терраформированию",
+             "Климатолог", "Специалист по радиационной защите", "Астрогеолог", "Гляциолог", "Инженер жизнеобеспечения",
+             "Метеоролог", "Оператор марсохода", "Киберинженер", "Штурман", "Пилот дронов"]
+    return render_template('list_prof.html', title='Список профессий', plist=prof_list, atr=atr)   
 
 @app.route('/answer')
 def answer():
